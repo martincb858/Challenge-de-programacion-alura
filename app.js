@@ -5,7 +5,14 @@ function encriptar(){
     let imagen = document.getElementById('imagen');
     let encriptado= document.getElementById("texto-encriptado");
     let copiar= document.getElementById("copiar");
+    let contenedorEncriptado= document.getElementById("encriptado")
     if (document.getElementById("input").value.length != 0){
+        if (window.innerWidth <=375 ){
+            contenedorEncriptado.style.height="40%"
+        }
+        if (window.innerWidth <=768 ){
+            contenedorEncriptado.style.height="30%"
+        }
         imagen.classList.remove("imagen");
         imagen.classList.add("oculta");
         encriptado.style.top= "4%";
@@ -15,9 +22,14 @@ function encriptar(){
         asignarTextoElemento("parrafo", textoCodificado);
         copiar.removeAttribute("disabled");
         copiar.textContent=  "Copiar";
-
     }
     else{
+        if (window.innerWidth <=375 ){
+            contenedorEncriptado.style.height="20%"
+        }
+        if (window.innerWidth <=768 ){
+           contenedorEncriptado.style.height="10%"
+        }
         imagen.classList.remove("oculta");
         imagen.classList.add("imagen");
         encriptado.style.top= "20%";
@@ -38,6 +50,12 @@ function desencriptar(){
     let encriptado= document.getElementById("texto-encriptado");
     let copiar= document.getElementById("copiar");
     if (document.getElementById("input").value.length != 0){
+        if (window.innerWidth <=375 ){
+            contenedorEncriptado.style.height="40%"
+        }
+        if (window.innerWidth <=768 ){
+            contenedorEncriptado.style.height="30%"
+        }
         imagen.classList.remove("imagen");
         imagen.classList.add("oculta");
         encriptado.style.top= "4%";
@@ -50,6 +68,12 @@ function desencriptar(){
 
     }
     else{
+        if (window.innerWidth <=375 ){
+            contenedorEncriptado.style.height="20%"
+        }
+        if (window.innerWidth <=768 ){
+            contenedorEncriptado.style.height="10%"
+        }
         imagen.classList.remove("oculta");
         imagen.classList.add("imagen");
         encriptado.style.top= "20%";
